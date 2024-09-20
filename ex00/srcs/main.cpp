@@ -6,7 +6,7 @@
 /*   By: dbarrene <dbarrene@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 16:32:52 by dbarrene          #+#    #+#             */
-/*   Updated: 2024/09/20 16:56:23 by dbarrene         ###   ########.fr       */
+/*   Updated: 2024/09/20 16:58:23 by dbarrene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -192,3 +192,12 @@ int	main(int argc, char** argv)
 	std::string arg = argv[1];
 	ptr[find_type(arg)](arg);
 }
+
+
+/* TODO:
+ * detect nan and nanf, as well as other edge cases
+ * fix precision to include decimals in whole numbers for float and double
+ * fix overflows and catch exceptions when calling stoi/stod/stof suite of
+ * functions
+ *
+ * */
