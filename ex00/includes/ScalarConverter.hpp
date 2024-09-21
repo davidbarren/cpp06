@@ -6,7 +6,7 @@
 /*   By: dbarrene <dbarrene@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 16:26:01 by dbarrene          #+#    #+#             */
-/*   Updated: 2024/09/11 17:06:28 by dbarrene         ###   ########.fr       */
+/*   Updated: 2024/09/21 13:46:55 by dbarrene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define SCALARCONVERTER_HPP
 #include <iostream>
 #include <typeinfo>
+#include <limits.h>
 
 class	ScalarConverter
 {

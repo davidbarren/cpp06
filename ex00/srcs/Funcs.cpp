@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Funcs.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbarrene <dbarrene@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/11 16:32:52 by dbarrene          #+#    #+#             */
-/*   Updated: 2024/09/21 14:56:37 by dbarrene         ###   ########.fr       */
+/*   Created: 2024/09/12 14:31:43 by dbarrene          #+#    #+#             */
+/*   Updated: 2024/09/16 12:15:33 by dbarrene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "ScalarConverter.hpp"
-int	main(int argc, char** argv)
+#include "Funcs.hpp"
+
+
+static int find_type(std::string str)
 {
-	if (argc != 2)
-	{
-		std::cout << "Please input a string representation of ONE C++ literal" << std::endl;
-		return 1;
-	}
-	ScalarConverter::convert(argv[1]);
+	if (std::isalpha(str[0]))
+		return CHAR;
+	else if (str.find('.') && str.back() == 'f')
+		return FLOAT;
+	else if (str.find('.') && std::isdigit(str[0]))
+		return DOUBLE;
+	else 
+		return INT;
 }
